@@ -39,6 +39,10 @@ namespace EFCRUDAPP
             this.label4 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.CustomerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgbCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,10 +75,18 @@ namespace EFCRUDAPP
             // dgbCustomer
             // 
             this.dgbCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerID,
+            this.FirstName,
+            this.LastName,
+            this.Address});
             this.dgbCustomer.Location = new System.Drawing.Point(344, 31);
             this.dgbCustomer.Name = "dgbCustomer";
+            this.dgbCustomer.ReadOnly = true;
             this.dgbCustomer.Size = new System.Drawing.Size(440, 326);
             this.dgbCustomer.TabIndex = 3;
+            this.dgbCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbCustomer_CellContentClick);
+            this.dgbCustomer.DoubleClick += new System.EventHandler(this.dgbCustomer_DoubleClick);
             // 
             // label2
             // 
@@ -127,6 +139,35 @@ namespace EFCRUDAPP
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // CustomerID
+            // 
+            this.CustomerID.DataPropertyName = "CustomerID";
+            this.CustomerID.HeaderText = "CustomerID";
+            this.CustomerID.Name = "CustomerID";
+            this.CustomerID.ReadOnly = true;
+            this.CustomerID.Visible = false;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +204,10 @@ namespace EFCRUDAPP
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }
 
